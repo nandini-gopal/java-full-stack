@@ -28,12 +28,68 @@
     padding-right: 20px;
 }
 img{
-    height:250px;
-    width: 600;
+    height:400px;
+    width: 700px;
     border:15px solid cadetblue;
 }
 .main{
-    width:200%;
+    width:20%;
     height: 90%;
     display:flex;
+    align-items: center;
+    padding:0px 120px;
+    
+}
+.hero h1{
+    font-size: 80px;
+    color: white;
+}
+.hero button{
+    background-color: chartreuse;
+    width: 160px;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 20px;
+}
+.switch{
+    display: flex;
+    align-items: center;
+    width: 5rem;
+    height: 2rem;
+    justify-content: space-evenly;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(7, 32,85);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.switch .lit{
+    display: none;
+}
+
+.dark-mode .switch{
+    background-color: rgb(115, 154, 238);
+}
+.dark-mode .switch .drk{
+    display: none;
+}
+.dark-mode .switch .lit{
+    display:block;
+}
+.dark-mode .nav{
+    background-color: #174098;
+    color:white;
+}
+.dark-mode .nav a{
+    color:white;
+}
+.dark-mode .main{
+    background-color: #041a49;
+}
+
+.dark-mode .hero button{
+    color: black;
+    background-color: #7aa1f7;
 }
