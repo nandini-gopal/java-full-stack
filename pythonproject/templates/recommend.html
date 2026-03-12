@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Recommendation</title>
+</head>
+<body>
+    <h1>Book Recommendation</h1>
+
+    <form action="/recommend_books" method="POST">
+        <input type="text" name="user_input" placeholder="Enter book name" required>
+        <button type="submit">Recommend</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+
+    {% if data %}
+        <h2>Recommended Books:</h2>
+        <div style="display:flex; flex-wrap: wrap;">
+            {% for book in data %}
+                <div style="margin:10px; width:200px; border:1px solid #ccc; padding:5px;">
+                    <img src="{{ book[2] }}" width="180"><br>
+                    <b>{{ book[0] }}</b><br>
+                    <i>{{ book[1] }}</i>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

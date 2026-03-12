@@ -16,5 +16,5 @@ console.log(family);
 //spread with objects
 const colors={c1:'red',c2:'green',c3:'blue'};
 const shape={s1:'circle',s2:'square'};
-const combine={...colors,...shape};
+const combine={...colors,...shape};//if same key value it override
 console.log(combine);
